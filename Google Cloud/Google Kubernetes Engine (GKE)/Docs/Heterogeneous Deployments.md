@@ -2,7 +2,7 @@
 
 Heterogeneous deployments play a pivotal role in addressing various technical and operational needs by interconnecting diverse infrastructure environments or regions. These deployments go by different names, such as "hybrid," "multi-cloud," or "public-private," depending on their specific characteristics.
 
-In the context of this lab, we define heterogeneous deployments as those spanning regions within a single cloud environment, involving multiple public cloud environments (multi-cloud), or combining on-premises and public cloud environments (hybrid or public-private).
+In the this doc's context, we define heterogeneous deployments as those spanning regions within a single cloud environment, involving multiple public cloud environments (multi-cloud), or combining on-premises and public cloud environments (hybrid or public-private).
 
 ## Challenges in Singular Deployments
 
