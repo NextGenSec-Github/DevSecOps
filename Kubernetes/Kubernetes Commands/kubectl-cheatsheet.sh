@@ -1,6 +1,6 @@
 #KUBECTL COMMANDS
 
-#KUBECTL EXPLAIN:
+#kubectl explain:
 
 #The explain command in kubectl can tell us about the deployment object:
 kubectl explain deployment
