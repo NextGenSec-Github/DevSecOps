@@ -11,6 +11,8 @@ kubectl explain deployment --recursive
 #You can use the explain command to help you understand the structure of a deployment object and understand what the individual fields do:
 kubectl explain deployment.metadata.name
 
+kubectl explain deployment.spec.replicas
+
 # POD COMMANDS
 # --------------
 # Create a pod
