@@ -11,12 +11,16 @@ kubectl explain deployment --recursive
 #You can use the explain command to help you understand the structure of a deployment object and understand what the individual fields do:
 kubectl explain deployment.metadata.name
 
-
 # Pod Commands
-echo "Pod Commands:"
-echo "--------------"
-echo "Create a pod: kubectl create pod <pod-name> --image=<image>"
-echo "Get pods: kubectl get pods"
-echo "Describe pod: kubectl describe pod <pod-name>"
-echo "Delete pod: kubectl delete pod <pod-name>"
-echo ""
+# --------------
+# Create a pod
+kubectl create pod <pod-name> --image=<image>
+
+# Get pods
+kubectl get pods
+
+# Describe pod
+kubectl describe pod <pod-name>
+
+# Delete pod
+kubectl delete pod <pod-name>
