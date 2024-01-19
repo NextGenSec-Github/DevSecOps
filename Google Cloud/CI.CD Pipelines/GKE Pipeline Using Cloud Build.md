@@ -296,5 +296,42 @@ git commit -m "Trigger CD pipeline"
 git push google master
 ```
 
+## Review Cloud Build Pipeline
+
+1. In the Cloud console, go to Cloud Build > Dashboard.
+
+2. Click into the hello-cloudbuild-app trigger to follow its execution and examine its logs. The last step of this pipeline pushes the new manifest to the hello-cloudbuild-env repository, which triggers the continuous delivery pipeline.
+
+3. Return to the main Dashboard.
+
+4. You should see a build running or having recently finished for the hello-cloudbuild-env repository. You can click on the build to follow its execution and examine its logs.
+
+## Test the complete pipeline
+
+The complete CI/CD pipeline is now configured. Test it from end to end.
+
+1. In the Cloud console, go to Kubernetes Engine > Services & Ingress.
+
+There should be a single service called hello-cloudbuild in the list. It has been created by the continuous delivery build that just ran.
+
+2. Click on the endpoint for the hello-cloudbuild service. You should see "Hello World!". If there is no endpoint, or if you see a load balancer error, you may have to wait a few minutes for the load balancer to be completely initialized. Click Refresh to update the page if needed.
+
+3. In Cloud Shell, replace "Hello World" with "Hello Cloud Build", both in the application and in the unit test:
+
+```bash
+cd ~/hello-cloudbuild-app
+```
+```bash
+sed -i 's/Hello World/Hello Cloud Build/g' app.py
+```
+```bash
+sed -i 's/Hello World/Hello Cloud Build/g' test_app.py
+```
+
+
+
+
+
+
 
 
