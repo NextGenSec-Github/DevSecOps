@@ -29,3 +29,17 @@ Dockerfiles consist of a series of instructions, each representing a step in the
 `EXPOSE: Informs Docker that the container will listen on specified network ports at runtime.`
 
 `CMD and ENTRYPOINT: Specify the command to run when the container starts.`
+
+```dockerfile
+RUN apt-get update && apt-get install -y \
+    package1 \
+    package2
+
+COPY . /app
+
+WORKDIR /app
+
+EXPOSE 8080
+
+CMD ["./start.sh"]
+```
