@@ -56,10 +56,15 @@ git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
 
+## Create the Git repositories in Cloud Source Repositories
 
+Now we will create the two Git repositories (hello-cloudbuild-app and hello-cloudbuild-env) and initialize hello-cloudbuild-app with some sample code.
 
-
-
+In Cloud Shell, run the following to create the two Git repositories:
+```bash
+#app repository
+gcloud source repos create hello-cloudbuild-app
+```
 
 
 
