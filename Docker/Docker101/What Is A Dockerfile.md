@@ -20,12 +20,12 @@ FROM ubuntu:20.04
 
 Dockerfiles consist of a series of instructions, each representing a step in the image-building process. Some common instructions include:
 
-RUN: Executes commands in the image.
+`RUN: Executes commands in the image.`
 
-COPY and ADD: Copies files from the host machine to the image.
+`COPY and ADD: Copies files from the host machine to the image.`
 
-WORKDIR: Sets the working directory for subsequent instructions.
+`WORKDIR: Sets the working directory for subsequent instructions.`
 
-EXPOSE: Informs Docker that the container will listen on specified network ports at runtime.
+`EXPOSE: Informs Docker that the container will listen on specified network ports at runtime.`
 
-CMD and ENTRYPOINT: Specify the command to run when the container starts.
+`CMD and ENTRYPOINT: Specify the command to run when the container starts.`
