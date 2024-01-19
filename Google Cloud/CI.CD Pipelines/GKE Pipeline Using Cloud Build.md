@@ -341,6 +341,21 @@ git push google master
 ```
 5. This triggers the full CI/CD pipeline.
 
+## Test the rollback
+
+Now let's rollback to the version of the application that said "Hello World!".
+
+1. In the Cloud console, go to Cloud Build > Dashboard.
+
+2. Click on View all link under Build History for the hello-cloudbuild-env repository.
+
+3. Click on the second most recent build available.
+
+4. Click Rebuild.
+
+When the build is finished, reload the application in your browser. You should now see "Hello World!" again.
+
+# Congratulations! 🎉
 
 
 
