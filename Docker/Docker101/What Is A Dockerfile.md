@@ -57,4 +57,29 @@ Each instruction in a Dockerfile creates a layer in the image. Layers are cached
 
 - Be explicit about the application's dependencies and environment.
 
+## Example Dockerfile
+Here's a simple example of a Dockerfile for a Node.js application:
+
+```dockerfile
+# Use an official Node.js runtime as a base image
+FROM node:14
+
+# Set the working directory
+WORKDIR /usr/src/app
+
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the application code to the working directory
+COPY . .
+
+# Expose port 3000
+EXPOSE 3000
+
+# Define the command to run the application
+CMD ["npm", "start"]
+```
 
