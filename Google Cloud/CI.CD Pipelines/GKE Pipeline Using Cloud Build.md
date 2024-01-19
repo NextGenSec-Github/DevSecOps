@@ -242,4 +242,34 @@ bindings:
   role: roles/source.writer
 EOF
 ```
+```bash
+gcloud source repos set-iam-policy \
+hello-cloudbuild-env /tmp/hello-cloudbuild-env-policy.yaml
+```
+
+## Create the trigger for the continuous delivery pipeline
+
+1. In the Cloud console, go to Cloud Build > Triggers.
+   
+2. Click Create Trigger.
+
+3. In the Name field, type hello-cloudbuild-deploy.
+
+4. Under Event, select Push to a branch.
+
+5. Under Source, select hello-cloudbuild-env as your Repository and ^candidate$ as your Branch.
+
+6. Under Build configuration, select Cloud Build configuration file.
+
+7. In the Cloud Build configuration file location field, type cloudbuild.yaml after the /.
+
+8. Click Create.
+
+
+
+
+
+
+
+
 
