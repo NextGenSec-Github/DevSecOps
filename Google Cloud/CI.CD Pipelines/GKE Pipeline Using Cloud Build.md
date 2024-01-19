@@ -171,7 +171,7 @@ Cloud Build is also used for the continuous delivery pipeline. The pipeline runs
 
 To deploy the application in your Kubernetes cluster, Cloud Build needs the Kubernetes Engine Developer Identity and Access Management role.
 
-1. 
+1. In Cloud Shell execute the following command:
 
 ```bash
 PROJECT_NUMBER="$(gcloud projects describe ${PROJECT_ID} --format='get(projectNumber)')"
@@ -181,4 +181,22 @@ gcloud projects add-iam-policy-binding ${PROJECT_NUMBER} \
 --member=serviceAccount:${PROJECT_NUMBER}@cloudbuild.gserviceaccount.com \
 --role=roles/container.developer
 ```
+You need to initialize the hello-cloudbuild-env repository with two branches (production and candidate) and a Cloud Build configuration file describing the deployment process.
+
+The first step is to clone the hello-cloudbuild-env repository and create the production branch. It is still empty.
+
+2. In Cloud Shell execute the following command:
+```bash
+cd ~
+```
+```bash
+gcloud source repos clone hello-cloudbuild-env
+```
+```bash
+cd ~/hello-cloudbuild-env
+```
+```bash
+git checkout -b production
+```
+
 
