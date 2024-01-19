@@ -93,11 +93,15 @@ PROJECT_ID=$(gcloud config get-value project)
 git remote add google "https://source.developers.google.com/p/${PROJECT_ID}/r/hello-cloudbuild-app"
 ```
 
-The code you just cloned contains a simple "Hello World" application.
+The code you just cloned contains a simple flask "Hello World" application.
 
 ![](https://github.com/yusufmunircloud/AWS-Projects/blob/main/img/general/Screenshot%202024-01-19%20224201.png?raw=true)
 
+## Create a container image with Cloud Build
 
+The code you cloned already contains the following Dockerfile.
+
+![](https://github.com/yusufmunircloud/AWS-Projects/blob/main/img/general/Screenshot%202024-01-19%20224559.png?raw=true)
 
 
 
