@@ -167,9 +167,18 @@ Cloud Build is also used for the continuous delivery pipeline. The pipeline runs
 - You have a view of successful and failed deployments in Cloud Build.
 - You can rollback to any previous deployment by re-executing the corresponding build in Cloud Build. A rollback also updates the production branch to truthfully reflect the history of deployments.
 
+## Grant Cloud Build access to GKE
 
+To deploy the application in your Kubernetes cluster, Cloud Build needs the Kubernetes Engine Developer Identity and Access Management role.
 
+1. 
 
-
-
+```bash
+PROJECT_NUMBER="$(gcloud projects describe ${PROJECT_ID} --format='get(projectNumber)')"
+```
+```bash
+gcloud projects add-iam-policy-binding ${PROJECT_NUMBER} \
+--member=serviceAccount:${PROJECT_NUMBER}@cloudbuild.gserviceaccount.com \
+--role=roles/container.developer
+```
 
