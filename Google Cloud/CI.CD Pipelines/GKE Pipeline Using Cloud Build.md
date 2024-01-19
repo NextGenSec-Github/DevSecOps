@@ -65,8 +65,10 @@ In Cloud Shell, run the following to create the two Git repositories:
 #app repository
 gcloud source repos create hello-cloudbuild-app
 ```
-
-
+```bash
+#env repository
+gcloud source repos create hello-cloudbuild-env
+```
 
 
 
