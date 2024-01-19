@@ -219,3 +219,27 @@ The cloudbuild-delivery.yaml file describes the deployment process to be run in 
 - Cloud Build applies the manifest on the GKE cluster.
 - If successful, Cloud Build copies the manifest on the production branch.
 
+4. Create a candidate branch and push both branches for them to be available in Cloud Source Repositories:
+
+```bash
+git checkout -b candidate
+```
+```bash
+git push origin production
+```
+```bash
+git push origin candidate
+```
+
+5. Grant the Source Repository Writer IAM role to the Cloud Build service account for the hello-cloudbuild-env repository:
+```bash
+PROJECT_NUMBER="$(gcloud projects describe ${PROJECT_ID} \
+--format='get(projectNumber)')"
+cat >/tmp/hello-cloudbuild-env-policy.yaml <<EOF
+bindings:
+- members:
+  - serviceAccount:${PROJECT_NUMBER}@cloudbuild.gserviceaccount.com
+  role: roles/source.writer
+EOF
+```
+
