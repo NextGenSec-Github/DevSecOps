@@ -103,5 +103,32 @@ The code you cloned already contains the following Dockerfile.
 
 ![](https://github.com/yusufmunircloud/AWS-Projects/blob/main/img/general/Screenshot%202024-01-19%20224559.png?raw=true)
 
+With this Dockerfile, you can create a container image with Cloud Build and store it in Artifact Registry.
+
+1. In Cloud Shell, create a Cloud Build build based on the latest commit with the following command:
+
+```bash
+cd ~/hello-cloudbuild-app
+```
+
+```bash
+COMMIT_ID="$(git rev-parse --short=7 HEAD)"
+```
+
+```bash
+gcloud builds submit --tag="${REGION}-docker.pkg.dev/${PROJECT_ID}/my-repository/hello-cloudbuild:${COMMIT_ID}" .
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
