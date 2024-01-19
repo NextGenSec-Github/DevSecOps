@@ -47,4 +47,14 @@ CMD ["./start.sh"]
 
 Each instruction in a Dockerfile creates a layer in the image. Layers are cached, which improves build efficiency. Docker uses a union file system to overlay these layers, resulting in the final image.
 
+## Best Practices
+
+- Keep the number of layers to a minimum for better performance.
+
+- Use official base images when possible for security and reliability.
+
+- Group related commands to take advantage of caching.
+
+- Be explicit about the application's dependencies and environment.
+
 
