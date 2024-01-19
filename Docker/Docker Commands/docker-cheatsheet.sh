@@ -14,8 +14,9 @@ docker rmi <image_name>
 #Remove all unused images
 docker image prune
 
-# DOCKER HUB: 
+#---------------------------------------#
 
+#DOCKER HUB: 
 #Login into Docker
 docker login -u <username>
 
@@ -27,3 +28,16 @@ docker search <image_name>
 
 #Pull an image from a Docker Hub
 docker pull <image_name>
+
+#---------------------------------------#
+
+#GENERAL COMMANDS:
+#Start the docker daemon
+docker -d
+
+#Get help with Docker. Can also use –help on all subcommands
+docker --help
+
+#Display system-wide information
+docker info
+
