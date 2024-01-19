@@ -1,4 +1,4 @@
-# What is a Dockerfile?
+# What is a Dockerfile? 🐳
 
 A Dockerfile is a script or a set of instructions used to build a Docker image. Docker images are lightweight, standalone, and executable packages that include everything needed to run a piece of software, including the code, runtime, libraries, and system tools.
 
