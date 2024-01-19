@@ -17,3 +17,15 @@ The app and env repositories are kept separate because they have different lifec
 **1. Activate Cloud Shell**
 
 Click Activate Cloud Shell Activate Cloud Shell icon at the top of the Google Cloud console.
+
+## Initialize 
+
+In Cloud Shell, set your project ID and project number. Save them as PROJECT_ID and PROJECT_NUMBER variables:
+
+```bash
+export PROJECT_ID=$(gcloud config get-value project)
+export PROJECT_NUMBER=$(gcloud projects describe $PROJECT_ID --format='value(projectNumber)')
+export REGION=
+gcloud config set compute/region $REGION
+```
+
