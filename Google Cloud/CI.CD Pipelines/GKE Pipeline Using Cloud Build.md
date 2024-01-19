@@ -49,12 +49,12 @@ Create a GKE cluster to deploy the sample application of this lab:
   gcloud container clusters create hello-cloudbuild --num-nodes 1 --region $REGION
 ```
 
+If you have never used Git in Cloud Shell, configure it with your name and email address. Git will use those to identify you as the author of the commits you will create in Cloud Shell:
 
-
-
-
-
-
+```bash
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
 
 
 
