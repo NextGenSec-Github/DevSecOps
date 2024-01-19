@@ -199,4 +199,23 @@ cd ~/hello-cloudbuild-env
 git checkout -b production
 ```
 
+3. Next you need to copy the cloudbuild-delivery.yaml file available in the hello-cloudbuild-app repository and commit the change:
+
+```bash
+cd ~/hello-cloudbuild-env
+```
+```bash
+cp ~/hello-cloudbuild-app/cloudbuild-delivery.yaml ~/hello-cloudbuild-env/cloudbuild.yaml
+```
+```bash
+git add .
+```
+```bash
+git commit -m "Create cloudbuild.yaml for deployment"
+```
+
+The cloudbuild-delivery.yaml file describes the deployment process to be run in Cloud Build. It has two steps:
+
+- Cloud Build applies the manifest on the GKE cluster.
+- If successful, Cloud Build copies the manifest on the production branch.
 
