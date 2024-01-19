@@ -14,5 +14,6 @@ The app and env repositories are kept separate because they have different lifec
 
 ## Getting Started
 
-1. Activate Cloud Shell
+**1. Activate Cloud Shell**
+
 Click Activate Cloud Shell Activate Cloud Shell icon at the top of the Google Cloud console.
