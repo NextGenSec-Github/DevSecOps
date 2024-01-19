@@ -328,9 +328,18 @@ sed -i 's/Hello World/Hello Cloud Build/g' app.py
 sed -i 's/Hello World/Hello Cloud Build/g' test_app.py
 ```
 
+4. Commit and push the change to Cloud Source Repositories:
 
-
-
+```bash
+git add app.py test_app.py
+```
+```bash
+git commit -m "Hello Cloud Build"
+```
+```bash
+git push google master
+```
+5. This triggers the full CI/CD pipeline.
 
 
 
