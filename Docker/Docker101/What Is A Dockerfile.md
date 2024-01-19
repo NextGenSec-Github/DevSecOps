@@ -43,3 +43,8 @@ EXPOSE 8080
 
 CMD ["./start.sh"]
 ```
+### Layers
+
+Each instruction in a Dockerfile creates a layer in the image. Layers are cached, which improves build efficiency. Docker uses a union file system to overlay these layers, resulting in the final image.
+
+
