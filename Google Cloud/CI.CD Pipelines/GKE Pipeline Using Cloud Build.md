@@ -265,11 +265,36 @@ hello-cloudbuild-env /tmp/hello-cloudbuild-env-policy.yaml
 
 8. Click Create.
 
+## Modify the continuous integration pipeline to trigger the continuous delivery pipeline.
+
+Next, add some steps to the continuous integration pipeline that will generate a new version of the Kubernetes manifest and push it to the hello-cloudbuild-env repository to trigger the continuous delivery pipeline.
+
+1. Copy the extended version of the cloudbuild.yaml file for the app repository:
+
+```bash
+cd ~/hello-cloudbuild-app
+```
+```bash
+cp cloudbuild-trigger-cd.yaml cloudbuild.yaml
+```
+
+The cloudbuild-trigger-cd.yaml is an extended version of the cloudbuild.yaml file. It adds the steps below: they generate the new Kubernetes manifest and trigger the continuous delivery pipeline.
+
+2. Commit the modifications and push them to Cloud Source Repositories:
 
 
-
-
-
+```bash
+cd ~/hello-cloudbuild-app
+```
+```bash
+git add cloudbuild.yaml
+```
+```bash
+git commit -m "Trigger CD pipeline"
+```
+```bash
+git push google master
+```
 
 
 
