@@ -70,6 +70,18 @@ gcloud source repos create hello-cloudbuild-app
 gcloud source repos create hello-cloudbuild-env
 ```
 
+Clone the sample code from GitHub: 
+
+```bash
+cd ~
+```
+```bash
+# NOTE: This code is from Google's repository
+git clone https://github.com/GoogleCloudPlatform/gke-gitops-tutorial-cloudbuild hello-cloudbuild-app
+```
+
+
+
 
 
 
