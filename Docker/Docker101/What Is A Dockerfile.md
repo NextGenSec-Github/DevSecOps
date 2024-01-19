@@ -14,3 +14,18 @@ A Dockerfile typically starts with a base image. This is the starting point for 
 
 ```dockerfile
 FROM ubuntu:20.04
+```
+
+## Instructions
+
+Dockerfiles consist of a series of instructions, each representing a step in the image-building process. Some common instructions include:
+
+RUN: Executes commands in the image.
+
+COPY and ADD: Copies files from the host machine to the image.
+
+WORKDIR: Sets the working directory for subsequent instructions.
+
+EXPOSE: Informs Docker that the container will listen on specified network ports at runtime.
+
+CMD and ENTRYPOINT: Specify the command to run when the container starts.
