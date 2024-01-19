@@ -80,9 +80,18 @@ cd ~
 git clone https://github.com/GoogleCloudPlatform/gke-gitops-tutorial-cloudbuild hello-cloudbuild-app
 ```
 
+Configure Cloud Source Repositories as a remote:
+```bash
+cd ~/hello-cloudbuild-app
+```
 
+```bash
+PROJECT_ID=$(gcloud config get-value project)
+```
 
-
+```bash
+git remote add google "https://source.developers.google.com/p/${PROJECT_ID}/r/hello-cloudbuild-app"
+```
 
 
 
