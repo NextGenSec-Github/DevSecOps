@@ -37,11 +37,22 @@ gcloud services enable container.googleapis.com \
 ```
 
 Create an Artifact Registry Docker repository named `my-repository` in the region to store your container images:
-```
+```bash
 gcloud artifacts repositories create my-repository \
   --repository-format=docker \
   --location=$REGION
 ```
+
+Create a GKE cluster to deploy the sample application of this lab:
+
+```bash
+  gcloud container clusters create hello-cloudbuild --num-nodes 1 --region $REGION
+```
+
+
+
+
+
 
 
 
