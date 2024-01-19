@@ -144,3 +144,12 @@ Now we will configure Cloud Build to automatically run a small unit test, build 
 
 8. Click Create.
 
+When the trigger is created, return to the Cloud Shell. You now need to push the application code to Cloud Source Repositories to trigger the CI pipeline in Cloud Build.
+
+9. To start this trigger, run the following command:
+```bash
+cd ~/hello-cloudbuild-app
+```
+```bash
+git push google master
+```
