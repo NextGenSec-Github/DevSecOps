@@ -14,7 +14,7 @@ The app and env repositories are kept separate because they have different lifec
 
 ## Getting Started
 
-**1. Activate Cloud Shell**
+**Activate Cloud Shell**
 
 Click Activate Cloud Shell Activate Cloud Shell icon at the top of the Google Cloud console.
 
@@ -28,4 +28,10 @@ export PROJECT_NUMBER=$(gcloud projects describe $PROJECT_ID --format='value(pro
 export REGION=
 gcloud config set compute/region $REGION
 ```
-
+Run the following command to enable the APIs for GKE, Cloud Build, Cloud Source Repositories and Container Analysis:
+```bash
+gcloud services enable container.googleapis.com \
+    cloudbuild.googleapis.com \
+    sourcerepo.googleapis.com \
+    containeranalysis.googleapis.com
+```
