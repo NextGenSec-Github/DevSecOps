@@ -1,4 +1,4 @@
-# Creative Kubernetes Pod definition YAML file
+# webapp pod definitions file
 
 apiVersion: v1
 kind: Pod
