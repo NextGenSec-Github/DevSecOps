@@ -75,3 +75,15 @@ mkdir my_module
 cd my_module
 ```
 
+2. **Create Module Files:**
+- `main.tf`: Define the module's configuration.
+- `variables.tf`: Declare input variables.
+- `outputs.tf`: Specify output variables.
+
+3. **Use the Module in a Configuration:**
+```hcl
+module "example" {
+  source = "./my_module"
+  variable1 = "value1"
+  variable2 = "value2"
+}
