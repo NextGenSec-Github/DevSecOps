@@ -25,3 +25,14 @@ output "database_address" {
 }
 ```
 
+## 3. Avoid Sensitive Information:
+
+Never expose sensitive information through outputs. Keep confidential details secure and consider using other methods like secure parameter storage.
+
+## 4. Version Outputs:
+
+Consider versioning outputs to maintain compatibility across different releases of your infrastructure.
+
+## 5. Avoid Excessive Outputs:
+
+Only expose necessary outputs to keep your configuration clear. Avoid information overload for users consuming the outputs.
