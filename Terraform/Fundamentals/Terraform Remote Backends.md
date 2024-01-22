@@ -1,4 +1,4 @@
-# Terraform Remote Backends - A Comprehensive Guide
+# Terraform Remote Backends 
 
 ## Table of Contents
 
