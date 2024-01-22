@@ -1,4 +1,4 @@
-# Kubernetes Pods
+# What are Pods?
 
 In Kubernetes, a **Pod** is the smallest and simplest deployable unit in the cluster. It represents a group of one or more containers that share the same network namespace and storage. Understanding Pods is essential for deploying and managing containerized applications efficiently.
 
