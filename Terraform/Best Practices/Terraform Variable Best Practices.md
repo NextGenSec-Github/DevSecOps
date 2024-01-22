@@ -137,5 +137,3 @@
         subnet_count_copy = var.subnet_count
       }
       ```
-
-Feel free to use and adapt this content in your Markdown file.
