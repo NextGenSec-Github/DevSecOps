@@ -19,6 +19,3 @@ spec:
     ports:
     - containerPort: 80
       name: http
-    # Add additional container configuration as needed
-
-  # Add additional containers, volumes, serviceAccount, etc., as per your requirements
