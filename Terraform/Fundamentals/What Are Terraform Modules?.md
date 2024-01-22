@@ -70,4 +70,8 @@ Terraform modules support versioning, ensuring that you can use a specific versi
 To create a module:
 
 1. **Create the Module Directory:**
+```bash
+mkdir my_module
+cd my_module
+```
 
