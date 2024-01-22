@@ -1,4 +1,4 @@
-# Kubernetes Nodes
+# What are Nodes
 
 In a Kubernetes cluster, a **Node** is a fundamental component responsible for running containers and providing the runtime environment for applications. Nodes can be physical machines or virtual machines (VMs) and are collectively managed by the Kubernetes master. Understanding Nodes is crucial for deploying and managing containerized applications efficiently.
 
