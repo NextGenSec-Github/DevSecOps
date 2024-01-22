@@ -87,3 +87,16 @@ module "example" {
   variable1 = "value1"
   variable2 = "value2"
 }
+```
+
+## 5. Module Best Practices
+
+- **Keep Modules Simple:** Aim for modules that do one thing well and are easy to understand.
+- **Use Input Variables Wisely:** Provide a clear and minimal set of input variables.
+- **Document Your Modules:** Include documentation in your module to guide users on how to use it effectively.
+- **Follow Naming Conventions:** Adopt consistent naming conventions for variables, resources, and outputs.
+
+
+
+
+
