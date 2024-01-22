@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql-db-pod
+  labels:
+    app: mysql-db
+
+spec:
+  containers:
+  - name: mysql-container
+    image: mysql:latest
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      value: "your-root-password"
+    - name: MYSQL_DATABASE
+      value: "your-database-name"
+    - name: MYSQL_USER
+      value: "your-username"
+    - name: MYSQL_PASSWORD
+      value: "your-password"
+    ports:
+    - containerPort: 3306
+      name: mysql
+
+# The Pod is named mysql-db-pod and labeled with app: mysql-db.
+# The Pod contains a container named mysql-container running the official MySQL image from Docker Hub.
+# Environment variables are set to configure the MySQL instance, including the root password, database name, username, and password.
+# The container exposes port 3306 for MySQL communication.
