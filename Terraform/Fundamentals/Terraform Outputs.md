@@ -13,8 +13,7 @@
 5. [Output Files](#output-files)
 6. [Using Outputs in Other Configurations](#using-outputs-in-other-configurations)
 7. [Remote State Outputs](#remote-state-outputs)
-8. [Terraform Outputs - Best Practices](#terraform-outputs-best-practices)
-9. [Conclusion](#conclusion)
+8. [Conclusion](#conclusion)
 
 ## Introduction
 
@@ -144,8 +143,6 @@ resource "aws_security_group" "example" {
   }
 }
 ```
-
-Terraform Outputs - Best Practices
 
 ## Conclusion
 Terraform Outputs provide a powerful way to expose and share information from your infrastructure configurations. Leveraging outputs enhances the flexibility and integration capabilities of your Terraform setups, allowing for better collaboration and extensibility.
