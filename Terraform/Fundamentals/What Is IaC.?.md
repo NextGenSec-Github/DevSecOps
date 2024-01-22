@@ -76,7 +76,7 @@ Several IaC tools are widely used in the industry, including:
 
 Terraform is a popular IaC tool that uses a declarative configuration language to define and provision infrastructure. It follows a simple workflow:
 
-1. **Configuration:** Define infrastructure configurations in Terraform's Human-Readable Configuration Language (HCL).
+1. **Configuration:** Define infrastructure configurations in Terraform's Hashicorp Configuration Language (HCL).
 
 2. **Initialization:** Initialize the working directory with the `terraform init` command to download necessary plugins and set up the backend.
 
