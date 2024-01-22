@@ -106,19 +106,21 @@
      ```
 
 ## 10. **Input Variable Documentation:**
-    - **Explanation:** Document each input variable thoroughly, including its purpose, expected values, and any constraints.
-    - **Example:**
-      ```hcl
+   - **Explanation:** Document each input variable thoroughly, including its purpose, expected values, and any constraints.
+   - **Example:**
+      
+   ```hcl
       variable "subnet_cidr_blocks" {
         type        = list(string)
         description = "List of CIDR blocks for subnets"
       }
-      ```
+   ```
 
 ## 11. **Testability:**
-    - **Explanation:** Include test cases or examples in your module documentation to demonstrate how it can be used and tested.
-    - **Example:**
-      ```hcl
+   - **Explanation:** Include test cases or examples in your module documentation to demonstrate how it can be used and tested.
+   - **Example:**
+      
+   ```hcl
       # Module for creating a VPC
       ## Testing
       To test the module, include the following in your Terraform configuration:
@@ -127,6 +129,6 @@
         source = "./modules/vpc"
         // Module configuration variables
       }
-      ```
+   ```
 
 Feel free to use and adapt this content in your Markdown file.
