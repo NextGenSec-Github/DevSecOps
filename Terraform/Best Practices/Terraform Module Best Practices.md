@@ -130,5 +130,3 @@
         // Module configuration variables
       }
    ```
-
-Feel free to use and adapt this content in your Markdown file.
