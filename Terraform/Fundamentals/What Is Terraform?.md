@@ -1,4 +1,4 @@
-# Terraform - A Comprehensive Guide
+# Terraform 
 
 ## Table of Contents
 
