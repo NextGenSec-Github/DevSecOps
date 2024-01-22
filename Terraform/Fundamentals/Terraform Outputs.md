@@ -109,5 +109,49 @@ resource "aws_security_group" "example" {
 }
 ```
 
+## Remote State Outputs
+When using remote state, outputs can be defined in a separate configuration and referenced by other configurations using the terraform_remote_state data source.
+
+```hcl
+# remote_outputs.tf
+output "instance_ip" {
+  value = aws_instance.example.public_ip
+}
+```
+
+```hcl
+# main.tf
+
+data "terraform_remote_state" "remote_outputs" {
+  backend = "remote"
+  config = {
+    organization = "example"
+    workspaces = {
+      name = "remote-outputs"
+    }
+  }
+}
+
+resource "aws_security_group" "example" {
+  name        = "example"
+  description = "Allow inbound traffic from the instance"
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = [data.terraform_remote_state.remote_outputs.outputs.instance_ip]
+  }
+}
+```
+
+## Conclusion
+Terraform Outputs provide a powerful way to expose and share information from your infrastructure configurations. Leveraging outputs enhances the flexibility and integration capabilities of your Terraform setups, allowing for better collaboration and extensibility.
+
+
+
+
+
+
+
 
 
