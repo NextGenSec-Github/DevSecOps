@@ -35,21 +35,79 @@ output "instance_ip" {
 }
 ```
 
+### Output Types
 
+Outputs support various types, including string, number, list, map, etc. Specify the type based on the nature of the output value.
 
+```hcl
+output "subnet_ids" {
+  value = aws_subnet.private.*.id
+}
+```
 
+## Using Outputs
 
+### Output Values
+Retrieve output values after applying your Terraform configuration:
 
+```bash
+terraform apply
+terraform output instance_ip
+```
 
+### Output Interpolation
+Interpolate output values into other parts of your Terraform configuration:
 
+```hcl
+resource "aws_security_group" "example" {
+  name        = "example"
+  description = "Allow inbound traffic from the instance"
+  ingress {
+    from_port = 22
+    to_port   = 22
+    protocol  = "tcp"
+    cidr_blocks = [terraform.output("instance_ip")]
+  }
+}
+```
 
+## Output Files
+Write output values to files for external use:
 
+```hcl
+output "instance_ip" {
+  value = aws_instance.example.public_ip
+}
 
+# Save output to a file
+terraform output -json > outputs.json
+```
 
+## Using Outputs in Other Configurations
+Outputs can be used in other Terraform configurations. Define the remote_state block to reference outputs from a remote configuration.
 
+```hcl
+data "terraform_remote_state" "other_config" {
+  backend = "remote"
+  config = {
+    organization = "example"
+    workspaces = {
+      name = "other-config"
+    }
+  }
+}
 
-
-
+resource "aws_security_group" "example" {
+  name        = "example"
+  description = "Allow inbound traffic from the instance"
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = [data.terraform_remote_state.other_config.outputs.instance_ip]
+  }
+}
+```
 
 
 
