@@ -35,9 +35,13 @@ Modules enable you to:
 A Terraform Module typically has the following structure:
 
 module/
+
 |-- main.tf
+
 |-- variables.tf
+
 |-- outputs.tf
+
 |-- ... (other files and folders)
 
 
