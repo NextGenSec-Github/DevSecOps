@@ -1,1 +1,21 @@
+# This is a basic Kubernetes Pod definition YAML file.
+# kind specifies the type of kubernetes object we are deploying
+apiVersion: v1
+kind: Pod
+metadata:
+  # The name and labels for identifying the Pod.
+  name: your-pod-name
+  labels:
+    app: your-app-label
 
+spec:
+  # Specification of the Pod, including containers, volumes, etc.
+  containers:
+  - name: your-container-name
+    # Docker image and tag for the container.
+    image: your-container-image:tag
+
+    # Ports exposed by the container.
+    ports:
+    - containerPort: 80
+      name: http
