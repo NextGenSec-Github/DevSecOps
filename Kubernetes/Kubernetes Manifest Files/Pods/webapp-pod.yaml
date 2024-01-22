@@ -1,0 +1,33 @@
+# Creative Kubernetes Pod definition YAML file
+
+apiVersion: v1
+kind: Pod
+metadata:
+  # Name and labels for the Pod.
+  name: creative-web-pod
+  labels:
+    app: creative-web-app
+
+  # Annotations for additional metadata.
+  annotations:
+    description: "A creative Kubernetes Pod running NGINX."
+
+spec:
+  # Specification of the Pod, including containers, volumes, etc.
+  containers:
+  - name: nginx-container
+    # NGINX image from Docker Hub.
+    image: nginx:latest
+
+    # Exposing ports for HTTP and HTTPS.
+    ports:
+    - containerPort: 80
+      name: http
+    - containerPort: 443
+      name: https
+
+    # Resource configuration for NGINX container.
+    resources:
+      limits:
+        memory: "256Mi"
+        cpu: "500m"
