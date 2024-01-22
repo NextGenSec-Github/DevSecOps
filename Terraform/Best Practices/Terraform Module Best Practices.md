@@ -124,7 +124,7 @@
       # Module for creating a VPC
       ## Testing
       To test the module, include the following in your Terraform configuration:
-      ```hcl
+
       module "vpc" {
         source = "./modules/vpc"
         // Module configuration variables
