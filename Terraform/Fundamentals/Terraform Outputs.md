@@ -1,5 +1,4 @@
-# Terraform Outputs - A Comprehensive Guide
-
+# Terraform Outputs 
 ## Table of Contents
 
 1. [Introduction](#introduction)
