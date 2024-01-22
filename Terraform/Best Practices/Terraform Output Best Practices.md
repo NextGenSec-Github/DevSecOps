@@ -36,3 +36,28 @@ Consider versioning outputs to maintain compatibility across different releases 
 ## 5. Avoid Excessive Outputs:
 
 Only expose necessary outputs to keep your configuration clear. Avoid information overload for users consuming the outputs.
+
+## 6. Use Output Variables:
+
+Leverage output variables to enhance modularity. This creates a clean interface between different Terraform modules.
+
+*Example:* 
+
+```hcl
+output "vpc_id" {
+  value = module.networking.vpc_id
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
