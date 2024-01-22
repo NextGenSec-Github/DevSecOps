@@ -110,24 +110,22 @@
      ```
 
 ## 10. **Terraform Input Variables File:**
-    - **Explanation:** Utilize a separate variable file to keep sensitive or environment-specific variable values separate from the main configuration.
-    - **Example:**
-      ```hcl
+   - **Explanation:** Utilize a separate variable file to keep sensitive or environment-specific variable values separate from the main configuration.
+   - **Example:**
+   ```hcl
       # main.tf
       variable "instance_type" {
         type    = string
         default = "t2.micro"
       }
-      ```
 
-      ```hcl
       # terraform.tfvars
       instance_type = "t3.micro"
-      ```
+   ```
 
 ## 11. **Immutable Variables:**
-    - **Explanation:** Prefer not to modify variable values in-place. Instead, use immutable variables for a more predictable configuration.
-    - **Example:**
+   - **Explanation:** Prefer not to modify variable values in-place. Instead, use immutable variables for a more predictable configuration.
+   - **Example:**
       ```hcl
       variable "subnet_count" {
         type        = number
