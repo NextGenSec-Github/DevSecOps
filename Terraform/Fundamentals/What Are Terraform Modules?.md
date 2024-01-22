@@ -45,3 +45,29 @@ module/
 |-- ... (other files and folders)
 
 
+- **main.tf:** Contains the main configuration for the module.
+- **variables.tf:** Defines input variables that can be customized when using the module.
+- **outputs.tf:** Specifies the values that the module will expose to other parts of the configuration.
+
+### Input Variables
+
+Input variables allow you to customize the behavior of a module. Users can provide values for these variables when using the module, making it adaptable to different scenarios.
+
+### Output Variables
+
+Output variables enable a module to expose specific values to be used by other parts of the configuration. This promotes encapsulation and allows for better composition of infrastructure.
+
+### Module Sources
+
+Modules can be sourced from various locations, such as a local file system, Git repositories, or module registries. This flexibility allows for easy sharing and consumption of modules.
+
+### Module Versioning
+
+Terraform modules support versioning, ensuring that you can use a specific version of a module to maintain stability and prevent unintended changes.
+
+## 4. Creating and Using Modules
+
+To create a module:
+
+1. **Create the Module Directory:**
+
