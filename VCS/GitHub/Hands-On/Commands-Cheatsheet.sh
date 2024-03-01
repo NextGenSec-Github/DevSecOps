@@ -5,6 +5,9 @@
 # Clone a repository
 git clone <repository_URL>
 
+# Clone a specific branch
+git clone -branch name_of_branch <repository_url>
+
 # Initialize a new Git repository
 git init
 
@@ -37,6 +40,12 @@ git checkout <branch_name>
 
 # Merge branches
 git merge <branch_name>
+
+# List both local and remote branches
+git branch -a
+
+# List only remote branches
+git branch -r
 
 # Fetch changes from remote repository
 git fetch
