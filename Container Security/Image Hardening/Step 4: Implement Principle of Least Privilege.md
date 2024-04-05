@@ -39,9 +39,18 @@ Mount sensitive directories as read-only within the container to prevent unautho
 VOLUME /var/log:ro
 ```
 
+### Limit Resource Usage
+Set resource limits for containers to prevent resource exhaustion attacks and ensure fair resource allocation within the container environment.
 
+```Dockerfile
+# Set CPU and memory limits
+docker run --cpu-period=100000 --cpu-quota=50000 --memory=512m ...
+```
 
-
+## Best Practices
+- **Follow Principle of Least Privilege:** Restrict container privileges to the minimum necessary for the application to function properly.
+- **Regularly Review Privileges:** Periodically review and update container privileges to ensure alignment with application requirements and security best practices.
+- **Monitor Container Activity:** Implement monitoring and logging solutions to track container activity and detect suspicious behavior indicative of privilege escalation attempts.
 
 
 
