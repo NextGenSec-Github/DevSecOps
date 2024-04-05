@@ -20,3 +20,36 @@ RUN adduser --disabled-password myuser
 
 # Switch to non-root user
 USER myuser
+```
+
+### Limit Capabilities
+Restrict container capabilities to only those required for the application to function properly. Use Docker's --cap-drop and --cap-add options to remove or add Linux capabilities.
+```Dockerfile
+# Drop unnecessary capabilities
+RUN --cap-drop=ALL --cap-add=NET_BIND_SERVICE ...
+
+# Add specific capabilities as needed
+```
+
+### Use Read-Only Filesystem
+Mount sensitive directories as read-only within the container to prevent unauthorized modifications. This helps mitigate the impact of file system-based attacks.
+
+```Dockerfile
+# Mount sensitive directory as read-only
+VOLUME /var/log:ro
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
