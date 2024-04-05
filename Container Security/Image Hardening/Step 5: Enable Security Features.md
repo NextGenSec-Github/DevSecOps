@@ -33,9 +33,13 @@ Apply SELinux labels to container files and directories to ensure proper enforce
 COPY --chown=user:user file.txt /path/to/file.txt
 ```
 
+## Enabling AppArmor
+AppArmor is another mandatory access control mechanism available in Linux distributions like Ubuntu. It confines individual programs to a limited set of resources and actions.
 
-
-
-
+### Verify AppArmor Status
+Check if AppArmor is enabled and running on the host system
+```bash
+sudo apparmor_status
+```
 
 
