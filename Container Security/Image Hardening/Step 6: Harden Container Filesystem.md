@@ -17,3 +17,23 @@ Mount critical directories as read-only within the container to prevent unauthor
 ```Dockerfile
 # Mount sensitive directories as read-only
 VOLUME /var/log:ro
+```
+
+### Minimize Writable Directories
+Minimize the number of writable directories within the container by limiting write access to only essential directories required for the application's operation.
+```Dockerfile
+# Create a writable directory for application data
+RUN mkdir /app/data && chown appuser:appuser /app/data
+VOLUME /app/data
+```
+
+
+
+
+
+
+
+
+
+
+
