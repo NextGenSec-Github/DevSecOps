@@ -25,3 +25,32 @@ Avoid hardcoding secrets directly into Dockerfiles, as this can expose sensitive
 # Avoid hardcoding secrets in Dockerfile
 ENV DB_PASSWORD=secretpassword
 ```
+
+### Inject Secrets at Runtime
+Inject secrets into containers at runtime using environment variables or secrets management solutions, rather than embedding them directly into Docker images.
+```bash
+# Example: Inject secret as an environment variable
+docker run -e DB_PASSWORD=<value> ...
+```
+
+### Encryption and Encryption Keys
+Encrypt sensitive data at rest and in transit using strong encryption algorithms and secure key management practices. Store encryption keys securely and avoid hardcoding them in Dockerfiles or environment variables.
+```bash
+# Example: Encrypting and decrypting sensitive data with OpenSSL
+echo "mysecretdata" | openssl enc -aes-256-cbc -pbkdf2 -pass pass:<encryption_key> -out encrypted_data.enc
+openssl enc -d -aes-256-cbc -pbkdf2 -pass pass:<encryption_key> -in encrypted_data.enc
+```
+
+## Best Practices
+- **Use Dedicated Secrets Management Solutions:** Utilize dedicated secrets management solutions to securely store and distribute secrets to containerized applications.
+- **Avoid Hardcoding Secrets:** Avoid hardcoding secrets directly into Dockerfiles or environment variables to prevent exposure of sensitive information.
+- **Implement Encryption:** Encrypt sensitive data at rest and in transit using strong encryption algorithms and secure key management practices.
+- **Monitor Access:** Monitor and audit access to environment variables and secrets to detect and respond to unauthorized access attempts.
+
+
+
+
+
+
+
+
