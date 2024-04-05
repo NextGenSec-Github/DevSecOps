@@ -42,8 +42,17 @@ Optionally, you can install additional Kubernetes add-ons to enhance cluster fun
 - **Amazon EFS CSI Driver:** For dynamic provisioning of Amazon EFS file systems.
 Refer to the official documentation for installation instructions for each add-on.
 
+## 4. Verify Cluster Setup
+Once the cluster is created and add-ons are installed (if needed), verify the cluster setup by checking the status of nodes and basic Kubernetes resources.
+```bash
+kubectl get nodes
+kubectl get pods --all-namespaces
+```
 
+## 5. Additional Configurations (Optional)
+Depending on your requirements, you may need to perform additional configurations such as setting up network policies, enabling logging, or integrating with AWS services.
 
+Refer to the Amazon EKS documentation and Kubernetes best practices for further customization options.
 
 
 
