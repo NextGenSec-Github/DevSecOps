@@ -48,4 +48,18 @@ Enable AppArmor support in Docker by setting the --security-opt flag when starti
 sudo dockerd --security-opt apparmor=1
 ```
 
+### Define AppArmor Profiles
+Create and define AppArmor profiles for Docker containers to specify the allowed actions and resources.
+```bash
+# Example: Define an AppArmor profile for a container
+sudo apparmor_parser -r -W /etc/apparmor.d/docker-myapp
+```
+
+## Best Practices
+- **Enable Security Features:** Enable SELinux or AppArmor in Docker to enforce mandatory access controls and enhance container security.
+- **Define Appropriate Policies:** Define security policies that align with your application requirements and security best practices.
+- **Regularly Monitor and Audit:** Monitor container activity and audit security policies regularly to detect and respond to security incidents effectively.
+
+## Conclusion
+Enabling security features such as SELinux or AppArmor is crucial for enhancing the security of Docker containers. By enforcing mandatory access controls and restricting container processes' capabilities, you can reduce the risk of security breaches and maintain a secure container environment.
 
