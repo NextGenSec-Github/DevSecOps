@@ -38,4 +38,14 @@ Set up Notary to enable image signing and verification for your container images
 notary init -p <repository>
 ```
 
+### Sign and Push Images
+Sign container images with Notary and push them to a registry.
+```bash
+notary sign <repository>/<image_name>:<tag>
+notary push <repository>/<image_name>:<tag>
+```
+
+
+
+
 
