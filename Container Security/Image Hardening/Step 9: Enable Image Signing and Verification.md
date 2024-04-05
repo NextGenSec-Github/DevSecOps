@@ -45,7 +45,17 @@ notary sign <repository>/<image_name>:<tag>
 notary push <repository>/<image_name>:<tag>
 ```
 
+### Pull and Verify Images
+Pull and verify signed container images with Notary.
+```bash
+notary pull <repository>/<image_name>:<tag>
+```
 
+## Best Practices
+- **Enable Image Signing Globally:** Enable image signing globally to enforce image signing and verification for all Docker commands.
+- **Sign Images Before Pushing:** Sign container images with Docker Content Trust or Notary before pushing them to a registry.
+- **Verify Images Before Pulling:** Always verify signed container images before pulling them from a registry to ensure their integrity and authenticity.
+- **Secure Key Management:** Securely manage signing keys and credentials used for image signing to prevent unauthorized access and tampering.
 
-
-
+## Conclusion
+Enabling image signing and verification is crucial for ensuring the integrity and authenticity of container images. By implementing tools like Docker Content Trust or Notary, you can mitigate the risk of deploying compromised or tampered images and enhance the security of your containerized applications.
