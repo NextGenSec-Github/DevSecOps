@@ -32,3 +32,27 @@ rules:
 - apiGroups: [""]
   resources: ["pods"]
   verbs: ["get", "list"]
+```
+
+## 3. Network Policies
+Network policies control traffic flow between pods and cluster components.
+
+### Practical Example:
+Implement network policies to restrict communication between pods based on their labels.
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-from-frontend
+spec:
+  podSelector:
+    matchLabels:
+      app: frontend
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: backend
+```
+
+
