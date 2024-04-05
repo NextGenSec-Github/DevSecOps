@@ -52,11 +52,8 @@ docker run --cpu-period=100000 --cpu-quota=50000 --memory=512m ...
 - **Regularly Review Privileges:** Periodically review and update container privileges to ensure alignment with application requirements and security best practices.
 - **Monitor Container Activity:** Implement monitoring and logging solutions to track container activity and detect suspicious behavior indicative of privilege escalation attempts.
 
-
-
-
-
-
+## Conclusion
+Implementing the principle of least privilege is a fundamental aspect of container image hardening. By limiting container privileges to the minimum necessary, you can reduce the attack surface, mitigate security risks, and enhance the overall security posture of your containerized applications.
 
 
 
