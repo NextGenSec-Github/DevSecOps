@@ -27,4 +27,32 @@ RUN apk --no-cache add \
 
 # Example command to start your application
 CMD ["python3", "app.py"]
+```
+### BusyBox
+BusyBox is another lightweight base image that provides a minimal environment with essential Unix utilities.
+```Dockerfile
+FROM busybox:latest
+
+# Example commands to set up your application (replace with your application setup)
+RUN mkdir /app \
+    && echo "Hello, world!" > /app/hello.txt
+
+# Example command to start your application
+CMD ["cat", "/app/hello.txt"]
+```
+
+## How to Choose a Minimal Base Image
+When choosing a minimal base image, consider the following factors:
+
+- **Size**: Select an image with the smallest possible size while still meeting your application's requirements.
+- **Community Support**: Choose an image with an active community and regular updates to ensure ongoing support and security patches.
+- **Compatibility**: Ensure compatibility with your application dependencies and runtime environment.
+
+
+
+
+
+
+
+
 
