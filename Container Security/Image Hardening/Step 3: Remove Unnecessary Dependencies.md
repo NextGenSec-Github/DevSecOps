@@ -38,9 +38,18 @@ RUN apk add --no-cache package1 package2
 RUN apk del package1
 ```
 
+### Automated Tools
+Integrate automated tools into your build pipeline to automatically identify and remove unnecessary dependencies from your container images. Tools like DockerSlim or Microscanner can analyze your Dockerfile and suggest optimizations to reduce image size and improve security.
 
+## Best Practices
 
+- **Regular Dependency Audits:** Conduct regular audits of your container images to identify and remove unnecessary dependencies.
+- **Optimize Image Layers:** Combine installation and removal of dependencies in the same Dockerfile instruction to minimize the number of image layers.
+- **Document Changes:** Document changes to your Dockerfile and dependencies to maintain visibility and ensure reproducibility of your container builds.
 
+## Conclusion
+
+Removing unnecessary dependencies is a critical step in container image hardening. By minimizing the number of installed packages and dependencies in your container images, you can reduce the attack surface and improve the security posture of your containerized applications.
 
 
 
