@@ -38,11 +38,33 @@ trivy_scan:
     - trivy image <image_name>
 ```
 
+## Remediate Vulnerabilities
+### Update Dependencies
+Update vulnerable dependencies to their latest patched versions to remediate vulnerabilities. Use package managers like apk, apt, or yum to update packages within the container image.
+```Dockerfile
+# Update package dependencies
+RUN apk update && apk upgrade
+```
 
+### Rebuild Container Image
+Rebuild the container image with the updated dependencies to incorporate the security fixes. Ensure that the new image is thoroughly tested before deploying it to production.
+```bash
+docker build -t <new_image_name> .
+```
 
+### Automated Remediation
+Automate the remediation process by integrating vulnerability scanning and remediation into your CI/CD pipeline. Use scripting or automation tools to automatically update dependencies and rebuild container images.
 
+```bash
+# Example script for automated remediation
+#!/bin/bash
 
+# Update dependencies
+apk update && apk upgrade
 
+# Rebuild container image
+docker build -t <new_image_name> .
+```
 
 
 
