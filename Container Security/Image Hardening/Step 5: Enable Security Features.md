@@ -18,3 +18,24 @@ Check if SELinux is enabled and running on the host system.
 
 ```bash
 sestatus
+```
+
+### Enable SELinux in Docker
+Enable SELinux support in Docker by setting the --selinux-enabled flag when starting the Docker daemon.
+```bash
+sudo dockerd --selinux-enabled
+```
+
+### Apply SELinux Labels to Container Files
+Apply SELinux labels to container files and directories to ensure proper enforcement of security policies.
+```Dockerfile
+# Set SELinux context for files and directories
+COPY --chown=user:user file.txt /path/to/file.txt
+```
+
+
+
+
+
+
+
