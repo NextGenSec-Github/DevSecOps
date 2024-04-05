@@ -48,7 +48,8 @@ openssl enc -d -aes-256-cbc -pbkdf2 -pass pass:<encryption_key> -in encrypted_da
 - **Monitor Access:** Monitor and audit access to environment variables and secrets to detect and respond to unauthorized access attempts.
 
 
-
+## Conclusion
+Securing environment variables and secrets within Docker containers is essential for protecting sensitive information and preventing unauthorized access. By following best practices such as using dedicated secrets management solutions, avoiding hardcoding secrets, and implementing encryption, you can enhance the security of your containerized applications and maintain compliance with security standards and regulations.
 
 
 
