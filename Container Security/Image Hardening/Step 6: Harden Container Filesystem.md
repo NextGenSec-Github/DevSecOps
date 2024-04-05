@@ -27,11 +27,20 @@ RUN mkdir /app/data && chown appuser:appuser /app/data
 VOLUME /app/data
 ```
 
+### Disable Unnecessary Filesystem Features
+Disable unnecessary filesystem features within the container to reduce the attack surface and mitigate the risk of exploitation. For example, you can disable the use of setuid and setgid permissions.
+```Dockerfile
+# Disable setuid and setgid permissions
+RUN find / -perm /6000 -type f -exec chmod a-s {} \;
+```
 
+## Best Practices
+- **Follow the Principle of Least Privilege:** Restrict filesystem access to only essential directories and files required for the application's functionality.
+- **Regularly Review and Update:** Periodically review and update container filesystem hardening measures to ensure alignment with security best practices and application requirements.
+- **Test in Staging Environment:** Test hardened filesystem configurations in a staging environment to verify compatibility and functionality before deploying to production.
 
-
-
-
+## Conclusion
+Harden the container filesystem is a critical aspect of container image hardening. By implementing measures such as using read-only filesystems, minimizing writable directories, and disabling unnecessary filesystem features, you can enhance the security of your containerized applications and reduce the risk of unauthorized access and tampering.
 
 
 
