@@ -29,6 +29,13 @@ docker trust sign <image_name>
 docker push <image_name>
 ```
 
+## Notary
+Notary is an open-source project that provides a framework for image signing and verification, compatible with various container registries.
 
+### Set Up Notary
+Set up Notary to enable image signing and verification for your container images.
+```bash
+notary init -p <repository>
+```
 
 
