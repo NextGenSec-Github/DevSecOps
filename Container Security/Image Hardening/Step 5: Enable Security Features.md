@@ -42,4 +42,10 @@ Check if AppArmor is enabled and running on the host system
 sudo apparmor_status
 ```
 
+### Enable AppArmor in Docker
+Enable AppArmor support in Docker by setting the --security-opt flag when starting the Docker daemon.
+```Dockerfile
+sudo dockerd --security-opt apparmor=1
+```
+
 
