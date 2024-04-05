@@ -17,3 +17,11 @@ Utilize dedicated secrets management solutions like HashiCorp Vault, AWS Secrets
 ```bash
 # Example: Retrieve secret from HashiCorp Vault
 export SECRET=$(vault kv get -field=value secret/myapp/credentials)
+```
+
+### Avoid Hardcoding Secrets in Dockerfiles
+Avoid hardcoding secrets directly into Dockerfiles, as this can expose sensitive information in plaintext and increase the risk of unauthorized access.
+```Dockerfile
+# Avoid hardcoding secrets in Dockerfile
+ENV DB_PASSWORD=secretpassword
+```
