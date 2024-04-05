@@ -31,6 +31,6 @@ Integrate automated build pipelines into your development workflow to automatica
 - **Monitor Security Advisories:** Stay informed about security advisories and vulnerabilities affecting your base images. Subscribe to security mailing lists and follow relevant sources to receive timely updates.
 - **Test Changes:** Test updated images in a staging environment before deploying them to production to ensure compatibility and prevent potential issues.
 
-### Conclusion
+## Conclusion
 
 Updating and patching the base image is a critical aspect of container image hardening. By regularly updating your Docker images with the latest security patches and fixes, you can reduce the risk of security breaches and maintain a secure container environment.
