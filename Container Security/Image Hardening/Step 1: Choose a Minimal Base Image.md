@@ -48,7 +48,8 @@ When choosing a minimal base image, consider the following factors:
 - **Community Support**: Choose an image with an active community and regular updates to ensure ongoing support and security patches.
 - **Compatibility**: Ensure compatibility with your application dependencies and runtime environment.
 
-
+## Conclusion
+Choosing a minimal base image is a crucial step in container image hardening. By selecting a minimal base image like Alpine Linux or BusyBox, you can reduce the attack surface and enhance the security of your containerized applications.
 
 
 
