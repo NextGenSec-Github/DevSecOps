@@ -55,4 +55,37 @@ spec:
           app: backend
 ```
 
+## 4. Pod Security Policies (PSP)
+Pod Security Policies define what security context a pod must run with.
+
+### Practical Example:
+Define a Pod Security Policy to restrict privileged access within pods.
+
+```yaml
+apiVersion: policy/v1beta1
+kind: PodSecurityPolicy
+metadata:
+  name: restricted
+spec:
+  privileged: false
+  # Add more restrictions as needed
+```
+
+
+## 5. Secrets Management
+Secrets management involves securely storing and managing sensitive information.
+
+### Practical Example:
+Use Kubernetes Secrets to store sensitive data like passwords or API tokens.
+
+```bash
+kubectl create secret generic my-secret --from-literal=password=secretpassword
+```
+
+Ensure access to secrets is properly restricted to authorized entities.
+
+
+
+
+
 
